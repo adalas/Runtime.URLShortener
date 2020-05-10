@@ -58,7 +58,7 @@ The birthday paradox states that, for instance, in a random group of 23 people, 
 
 For instance, with a 64 bits hash function and assuming we would accept a probability of collision of 1 in a million, the maximum number of URLs that we can persist in the system at the same time is only 6.07 millions. Of course, we could increase the size of the hash function from 64 bits to 128 bits, but this would double the size of our ShortURL, having direct impact in the usability.
 
-![Table of hash collisions. Source: https://preshing.com/20110504/hash-collision-probabilities/](/assets/images/hashcolisions.jpg)
+![Table of hash collisions](https://github.com/jpsalada/Runtime.URLShortner/blob/master/assets/images/hashcollisions.jpg)
 
 There are many possible solutions and alternatives. One possible alternative solution, and in case we give up on URL deduplication, we could play with the maximum time of allowed URLs to remain in the system, and encode the ShortURL, based on a timestamp that is designed to only track time within the maximum time window that URLs remain in the system. 
 
