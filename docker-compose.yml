@@ -19,24 +19,6 @@ services:
   
 
 
-#   urlshortener.angular.docker:
-#     image: ${DOCKER_REGISTRY-}urlshortener.angular
-#     build: 
-#       context: .
-#       dockerfile: src/WebApp/Runtime.URLShortener/Docker/Angular.Dockerfile
-
-  # urlshortner1.angular.app:
-  #   image: ${DOCKER_REGISTRY-}urlshortener.angular
-  #   build:
-  #     context: .
-  #     dockerfile: src/WebApp/Runtime.URLShortener/Docker/Angular.Dockerfile
-  #   ports:
-  #     - "4200:4200" 
-  #     - "49153:49153"
-  #   volumes:
-  #     - ./src/WebApp/Runtime.URLShortener/ClientApp:/home/node/app
-
-
   urlshortener.docker:
     image: ${DOCKER_REGISTRY-}urlshortner
     environment:
