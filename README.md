@@ -28,7 +28,9 @@ Built with:
     3. URLs larger than a configured value
 
 ### Solution/Architecture Characteristics ###
-- WebApp UI implemented in **AngularJS**, v8.12, running on .net krestel web server and driven by asp.net.core 3.1;
+![Architecture Overview](https://github.com/jpsalada/Runtime.URLShortner/blob/master/assets/images/architectur.png)
+
+- WebApp UI implemented in **AngularJS**, v8.12, running on .net krestel web server and driven by **dotnet.core.asp**;
 - Backend in **dotnet.core.sdk and asp v3.1, exposing functionality through a REST API.
 - Supports **https**, with self-signed certificates for krestel web server;
 - The storage database selected was **Redis** with persistence enabled. The mapping of a ShortURL to an URL matches perfectly the paradigm of Key-Value access. There are another Key-Value databases but Redis not only is a proven solution, as it also allows data persistence. This is very important, because Key-Value databases are most of the times designed for cach only purposes. A Key-Value database, allows horizontal scalling which I believe is the correct scaling solution for our problem.
