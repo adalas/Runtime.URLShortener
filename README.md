@@ -4,9 +4,11 @@ This is a WebApp that shortens URLs through a website.
 
 ### Usage ###
 On the root folder execute:
+
 `>docker-compose up`
 
 Access the portal to ShortenURL: https://localhost:443/
+
 Use Short URL: https://localhost:443/s/{shortURL}
 
 ### Dependencies ###
@@ -37,6 +39,7 @@ Built with:
     1. *Unit Tests*: against classes
     2. *Integration Tests*: interation between URLRepository and Redis
     3. *Functional Tests*: with the webserver up, backed by Redis, against the webservices;
+    
   **Note:** Due to time restrictions tests were not extensively populated. Given the time I preferred to demonstrate the 3 types of testing, instead of just implementing Unit Tests. My objective here here was to demonstrate:
         1- The 3 types of testing are absolutely essential. We could still add other types, such as, load/stress or penetration testing.
         2- The solution architecture and decoupling allows these 3 types of testing easilly;
@@ -55,7 +58,9 @@ The birthday paradox states that, for instance, in a random group of 23 people, 
 
 For instance, with a 64 bits hash function and assuming we would accept a probability of collision of 1 in a million, the maximum number of URLs that we can persist in the system at the same time is only 6.07 millions. Of course, we could increase the size of the hash function from 64 bits to 128 bits, but this would double the size of our ShortURL, having direct impact in the usability.
 
-However, if no URL deduplication  was supported, we could play with the maximum time of allowed URLs to remain in the system, and encode the ShortURL, based on a timestamp that is designed to only track time within the maximum time windows of URLs to remain in the system. 
+![Table of hash collisions. Source: https://preshing.com/20110504/hash-collision-probabilities/](/assets/images/hashcolisions.jpg)
+
+There are many possible solutions and alternatives. One possible alternative solution, and in case we give up on URL deduplication, we could play with the maximum time of allowed URLs to remain in the system, and encode the ShortURL, based on a timestamp that is designed to only track time within the maximum time window that URLs remain in the system. 
 
 If we do so, the possibility to get a collision only happens if requests arrive at the same time. So if URLs remain in the system for a maximum x days, and using timestamps with ms precision, our timestamp would only need to encode information of d:hh:mm.ss:ms. If we assume d = 30, then we could encode the timestamp with just 32 bits. Assuming that there could exist URLs arriving at the same timestamp (ms), we would add more 32 bits of the URL hash value to the ShortURL value:
 
