@@ -1,9 +1,14 @@
 # URLShortener WebApp #
 
-This is a WebApp that shortens URLs through a website. You can visit it at: https://cvrnnmaskjs.westeurope.cloudapp.azure.com:5001/ (I am reusing an Azure machine to put it online)
+This is a WebApp that shortens URLs through a website. 
+
+You can visit it at: https://cvrnnmaskjs.westeurope.cloudapp.azure.com:5001/ 
+
+(I am reusing an Azure machine to put this online, so the domain name is not related)
 
 ### Usage ###
 Access the portal to ShortenURL: https://localhost:5001/
+
 Use Short URL: https://localhost:5001/s/{shortURL}
 
 ### System Setup ###
