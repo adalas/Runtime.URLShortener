@@ -1,15 +1,15 @@
 # URLShortener WebApp #
 
-This is a WebApp that shortens URLs through a website.
+This is a WebApp that shortens URLs through a website. You can visit it at: https://cvrnnmaskjs.westeurope.cloudapp.azure.com:5001/ (I am reusing an Azure machine to put it online)
 
 ### Usage ###
-On the root folder execute:
+Access the portal to ShortenURL: https://localhost:5001/
+Use Short URL: https://localhost:5001/s/{shortURL}
 
-`>docker-compose up`
+### System Setup ###
+On the repository root folder execute:
 
-Access the portal to ShortenURL: https://localhost:443/
-
-Use Short URL: https://localhost:443/s/{shortURL}
+`> docker-compose up`
 
 ### Dependencies ###
 Built with:
