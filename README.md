@@ -33,7 +33,7 @@ Built with:
     3. URLs larger than a configured value
 
 ### Solution/Architecture Characteristics ###
-![Architecture Overview](https://github.com/jpsalada/Runtime.URLShortner/blob/master/assets/images/architectur.png)
+![Architecture Overview](https://github.com/jpsalada/Runtime.URLShortner/blob/master/assets/images/architecture.png)
 
 - WebApp UI implemented in **AngularJS**, v8.12, running on .net krestel web server and driven by **dotnet.core.asp**;
 - Backend in **dotnet.core.sdk and asp v3.1, exposing functionality through a REST API.
