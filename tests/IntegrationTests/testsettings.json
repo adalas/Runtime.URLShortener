@@ -1,0 +1,10 @@
+{
+    "Redis":{
+    "hostname":"localhost",
+    "port":7777,
+    "password":"changeit"
+    },
+    "ConfigDB": {
+        "EntryTimeToLeaveDays": "10"
+    }
+}
